@@ -1,0 +1,7 @@
+{
+  "ignore_dirs": [
+    "tmp",
+    "bower_components",
+    "node_modules"
+  ]
+}
