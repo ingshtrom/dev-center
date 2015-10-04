@@ -1,12 +1,16 @@
-<div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">{{#link-to 'index'}}NGC Dev Center{{/link-to}}</span>
-      <div class="mdl-layout-spacer"></div>
-    </div>
-    {{#main-tabs}}{{/main-tabs}}
-  </header>
-  <main class="mdl-layout__content">
-    {{outlet}}
-  </main>
-</div>
+<nav>
+  <div class="nav-wrapper">
+    {{#link-to 'index' class="brand-logo"}}NGC Dev Center{{/link-to}}
+
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      {{#each model as |app|}}
+        <li>{{#link-to 'manage' app }}{{app.name}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</nav>
+
+{{outlet}}
+
+{{!-- ember-cli-materialize modal container --}}
+{{md-modal-container}}
