@@ -26,11 +26,13 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  '*': ['sessionAuth'],
+  // TODO (ingshtrom): we need some real auth...
+  '*': true
+  // '*': ['sessionAuth'],
 
-  UserController: {
-    login: true
-  },
+  // UserController: {
+  //   login: true
+  // },
 
   /***************************************************************************
   *                                                                          *

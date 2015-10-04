@@ -6,19 +6,25 @@
 */
 
 module.exports = {
+  autoCreatedAt: true,
+  autoUpdatedAt: true,
+  migrate: 'drop',
 
   attributes: {
-
-    autoCreatedAt: true,
-    autoUpdatedAt: true,
-
     name: {
       type: 'string',
-      required: true,
+      required: true
+    },
+    appplication: {
+      model: 'app',
+    },
+    description: {
+      type: 'string',
+      defaultsTo: ''
     },
     environment: {
       type: 'string',
-      in: ['dev', 'stage', 'uat', 'prod'],
+      in: ['dev', 'stage', 'uat', 'prod']
     },
     value: {
       type: 'boolean',

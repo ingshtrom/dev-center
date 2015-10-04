@@ -6,7 +6,6 @@
  */
 
 module.exports = {
-	actions: false,
-	rest: true
+  actions: false,
+  rest: true
 };
-
