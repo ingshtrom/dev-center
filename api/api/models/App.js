@@ -8,7 +8,7 @@
 module.exports = {
   autoCreatedAt: true,
   autoUpdatedAt: true,
-  migrate: 'drop',
+  migrate: 'safe',
 
   attributes: {
     name: {

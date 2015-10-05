@@ -3,6 +3,7 @@
     {{#link-to 'index' class="brand-logo"}}NGC Dev Center{{/link-to}}
 
     <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>{{#link-to 'create-app'}}New App{{/link-to}}</li>
       {{#each model as |app|}}
         <li>{{#link-to 'manage' app }}{{app.name}}{{/link-to}}</li>
       {{/each}}
