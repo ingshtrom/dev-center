@@ -1,17 +1,46 @@
 <nav>
   <div class="nav-wrapper">
-    {{#link-to 'index' class="brand-logo"}}NGC Dev Center{{/link-to}}
-
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li>{{#link-to 'create-app'}}New App{{/link-to}}</li>
-      {{#each model as |app|}}
-        <li>{{#link-to 'manage' app }}{{app.name}}{{/link-to}}</li>
-      {{/each}}
+    <ul class="left">
+      <li>
+        <a href="#" class="brand-logo">Logo</a>
+      </li>
     </ul>
+
+    <ul class="right hide-on-med-and-down">
+      <li>
+        {{#dc-dropdown title="Apps"}}
+          {{#each model as |app|}}
+            <li>
+              {{#link-to 'manage' app}}
+                {{app.name}}
+              {{/link-to}}
+            </li>
+          {{/each}}
+          <li>
+            {{#link-to 'create-app'}}
+              Create App
+            {{/link-to}}
+          </li>
+        {{/dc-dropdown}}
+      </li>
+    </ul>
+
   </div>
 </nav>
 
-{{outlet}}
+{{#dc-dropdown title="Apps" buttonClass="btn"}}
+  {{#each model as |app|}}
+    <li>
+      {{#link-to 'manage' app}}
+        {{app.name}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+  <li>
+    {{#link-to 'create-app'}}
+      Create App
+    {{/link-to}}
+  </li>
+{{/dc-dropdown}}
 
-{{!-- ember-cli-materialize modal container --}}
-{{md-modal-container}}
+{{outlet}}

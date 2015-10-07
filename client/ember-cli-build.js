@@ -27,23 +27,6 @@ module.exports = function(defaults) {
     production: 'bower_components/materialize/dist/css/materialize.min.css'
   });
 
-  // materialize icons
-  app.import('bower_components/materialize/dist/font/material-design-icons/Material-Design-Icons.eot', {
-    destDir: 'font/material-design-icons'
-  });
-  app.import('bower_components/materialize/dist/font/material-design-icons/Material-Design-Icons.svg', {
-    destDir: 'font/material-design-icons'
-  });
-  app.import('bower_components/materialize/dist/font/material-design-icons/Material-Design-Icons.ttf', {
-    destDir: 'font/material-design-icons'
-  });
-  app.import('bower_components/materialize/dist/font/material-design-icons/Material-Design-Icons.woff', {
-    destDir: 'font/material-design-icons'
-  });
-  app.import('bower_components/materialize/dist/font/material-design-icons/Material-Design-Icons.woff2', {
-    destDir: 'font/material-design-icons'
-  });
-
   // materialize fonts
   app.import('bower_components/materialize/dist/font/roboto/Roboto-Bold.ttf', {
     destDir: 'font/roboto'
