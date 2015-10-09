@@ -8,12 +8,16 @@
 module.exports = {
   autoCreatedAt: true,
   autoUpdatedAt: true,
-  migrate: 'safe',
+  migrate: 'drop',
 
   attributes: {
     name: {
       type: 'string',
       required: true
+    },
+    flags: {
+      collection: 'flag',
+      via: 'app'
     }
   }
 };

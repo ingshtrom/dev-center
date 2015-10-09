@@ -1,3 +1,5 @@
+/* globals sails */
+'use strict';
 /**
 * Flag.js
 *
@@ -8,43 +10,76 @@
 module.exports = {
   autoCreatedAt: true,
   autoUpdatedAt: true,
-  migrate: 'safe',
+  migrate: 'drop',
 
   attributes: {
     name: {
       type: 'string',
       required: true
     },
-    appplication: {
+    app: {
       model: 'app',
+      required: true
     },
     description: {
       type: 'string',
       defaultsTo: ''
     },
-    environment: {
-      type: 'string',
-      in: ['dev', 'stage', 'uat', 'prod']
+    dev: {
+      type: 'boolean',
+      defaultsTo: false
     },
-    value: {
+    stage: {
+      type: 'boolean',
+      defaultsTo: false
+    },
+    uat: {
+      type: 'boolean',
+      defaultsTo: false
+    },
+    prod: {
       type: 'boolean',
       defaultsTo: false
     }
   },
 
   beforeCreate: function verifyNoDuplicates (values, cb) {
-    var Flag = sails.models.Flag,
+    var flagModel = sails.models.flag,
         searchOptions;
 
     searchOptions = {
       name: values.name,
-      environment: values.environment
+      app: values.app
     };
 
-    Flag.find(searchOptions)
-      .then(function (results) {
-        if (results.length > 0) {
-          cb(new Error('There is already a flag with the same name and environment.'));
+    flagModel.findOne(searchOptions)
+      .then(function (result) {
+        sails.log.debug('beforeCreate::searching for duplicate flags => ', {
+          searchOptions: searchOptions,
+          result: result
+        });
+        if (result) {
+          let err = {
+            code: 'E_UNIQUE',
+            details: 'The flag must be unique for the given application',
+            model: 'Flag',
+            invalidAttributes: {
+              name: [
+                {
+                  rule: 'combined_unique',
+                  message: 'name and app must be unique'
+                }
+              ],
+              app: [
+                {
+                  rule: 'combined_unique',
+                  message: 'name and app must be unique'
+                }
+              ]
+            },
+            status: 400
+          };
+          cb(err);
         } else {
           cb();
         }

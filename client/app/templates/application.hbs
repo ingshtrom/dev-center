@@ -2,13 +2,13 @@
   <div class="nav-wrapper">
     <ul class="left">
       <li>
-        <a href="#" class="brand-logo">Logo</a>
+        <a href="#" class="brand-logo">NGC Dev Center</a>
       </li>
     </ul>
 
     <ul class="right hide-on-med-and-down">
       <li>
-        {{#dc-dropdown title="Apps"}}
+        {{#dc-dropdown title="Applications" options=dropdownOptions}}
           {{#each model as |app|}}
             <li>
               {{#link-to 'manage' app}}
@@ -27,20 +27,5 @@
 
   </div>
 </nav>
-
-{{#dc-dropdown title="Apps" buttonClass="btn"}}
-  {{#each model as |app|}}
-    <li>
-      {{#link-to 'manage' app}}
-        {{app.name}}
-      {{/link-to}}
-    </li>
-  {{/each}}
-  <li>
-    {{#link-to 'create-app'}}
-      Create App
-    {{/link-to}}
-  </li>
-{{/dc-dropdown}}
 
 {{outlet}}
