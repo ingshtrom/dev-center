@@ -2,13 +2,20 @@
   <div class="nav-wrapper">
     <ul class="left">
       <li>
-        <a href="#" class="brand-logo">NGC Dev Center</a>
+        <a href="#">
+          <span class="brand-logo">NGC Dev Center</span>
+        </a>
       </li>
     </ul>
 
-    <ul class="right hide-on-med-and-down">
+    <ul class="right hide-on-med-and-down text-blue text-darken-2">
       <li>
         {{#dc-dropdown title="Applications" options=dropdownOptions}}
+          <li>
+            {{#link-to 'create-app'}}
+              New...
+            {{/link-to}}
+          </li>
           {{#each model as |app|}}
             <li>
               {{#link-to 'manage' app}}
@@ -16,11 +23,6 @@
               {{/link-to}}
             </li>
           {{/each}}
-          <li>
-            {{#link-to 'create-app'}}
-              Create App
-            {{/link-to}}
-          </li>
         {{/dc-dropdown}}
       </li>
     </ul>

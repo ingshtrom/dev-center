@@ -1,0 +1,7 @@
+// override some of the default .toast styles
+#toast-container {
+  // we need to make sure we are below
+  // the navbar. it looks cleaner
+  top: 9%;
+  right: 2%;
+}

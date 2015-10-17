@@ -1,55 +1,11 @@
-<div class="row">
+{{!-- <div class="row">
   <div class="col s12 m5">
     <div class="card-panel hoverable">
-      {{#dc-collapsible}}
-        <li>
-          <div class="collapsible-header">
-            <div class="left">
-              <i class="material-icons">lock_outline</i>Feature Flags
-            </div>
-            <div class="right">
-              <a class="waves-effect waves-light btn">
-                <i class="material-icons left">add</i>New
-              </a>
-            </div>
-
-          </div>
-          <div class="collapsible-body">
-            <table>
-              <thead>
-                <tr>
-                  <th data-field="id"></th>
-                  <th data-field="name"></th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {{#each model as |flag|}}
-                  <tr>
-                    <td>
-                      <div class="input-field">
-                        {{input id=flag.name value=flag.enabled type="checkbox"}}
-                      </div>
-                    </td>
-                  </tr>
-                {{/each}}
-                <!--<tr>-->
-                <!--<td>Alvin</td>-->
-                <!--<td>Eclair</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                <!--<td>Alan</td>-->
-                <!--<td>Jellybean</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                <!--<td>Jonathan</td>-->
-                <!--<td>Lollipop</td>-->
-                <!--</tr>-->
-              </tbody>
-            </table>
-          </div>
-        </li>
-      {{/dc-collapsible}}
+      <span class="card-title">
+        <span class="blue-text text-darken-2">Feature Flags</span>
+        <i class="material-icons left">lock_outline</i>
+      </span>
     </div>
   </div>
-</div>
+</div> --}}
+{{flag-mgmt}}

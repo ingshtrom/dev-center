@@ -18,61 +18,61 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   // materialize js/css
-  app.import({
-    development: 'bower_components/materialize/dist/js/materialize.js',
-    production:  'bower_components/materialize/dist/js/materialize.min.js'
-  });
-  app.import({
-    development: 'bower_components/materialize/dist/css/materialize.css',
-    production: 'bower_components/materialize/dist/css/materialize.min.css'
-  });
+  // app.import({
+  //   development: 'bower_components/materialize/dist/js/materialize.js',
+  //   production:  'bower_components/materialize/dist/js/materialize.min.js'
+  // });
+  // app.import({
+  //   development: 'bower_components/materialize/dist/css/materialize.css',
+  //   production: 'bower_components/materialize/dist/css/materialize.min.css'
+  // });
 
   // materialize fonts
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Bold.ttf', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Bold.woff', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Bold.woff2', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Light.ttf', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Light.woff', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Light.woff2', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Medium.ttf', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Medium.woff', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Medium.woff2', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Regular.ttf', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Regular.woff', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Regular.woff2', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Thin.ttf', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Thin.woff', {
-    destDir: 'font/roboto'
-  });
-  app.import('bower_components/materialize/dist/font/roboto/Roboto-Thin.woff2', {
-    destDir: 'font/roboto'
-  });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Bold.ttf', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Bold.woff', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Bold.woff2', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Light.ttf', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Light.woff', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Light.woff2', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Medium.ttf', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Medium.woff', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Medium.woff2', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Regular.ttf', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Regular.woff', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Regular.woff2', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Thin.ttf', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Thin.woff', {
+  //   destDir: 'font/roboto'
+  // });
+  // app.import('bower_components/materialize/dist/font/roboto/Roboto-Thin.woff2', {
+  //   destDir: 'font/roboto'
+  // });
 
   return app.toTree();
 };

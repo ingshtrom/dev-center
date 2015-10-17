@@ -1,4 +1,9 @@
 // colors
-$light-gray: rgb(200, 200, 200);
+$light-gray: #eeeeee;
 
 $bg-color: $light-gray;
+
+$primary-color: color("blue", "base") !default;
+$secondary-color: color("pink", "accent-1") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
