@@ -1,0 +1,44 @@
+<table class="centered striped">
+  <thead>
+    <tr>
+      <th data-field="id">Name</th>
+      <th data-field="name">Description</th>
+      <th data-field="price">DEV</th>
+      <th data-field="price">STAGE</th>
+      <th data-field="price">UAT</th>
+      <th data-field="price">PROD</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each model as |ff|}}
+      <tr>
+        <td>{{ff.name}}</td>
+        <td>{{ff.description}}</td>
+        <td>{{md-switch checked=ff.dev onLabel='' offLabel=''}}</td>
+        <td>{{md-switch checked=ff.stage onLabel='' offLabel=''}}</td>
+        <td>{{md-switch checked=ff.uat onLabel='' offLabel=''}}</td>
+        <td>{{md-switch checked=ff.prod onLabel='' offLabel=''}}</td>
+      </tr>
+    {{/each}}
+    {{!-- <tr>
+      <td>Make-Payments</td>
+      <td>Place to make payments in NGEN</td>
+      <td>
+        {{md-switch checked=dev onLabel='' offLabel=''}}
+      </td>
+      <td>{{md-switch checked=stage onLabel='' offLabel=''}}</td>
+      <td>{{md-switch checked=uat onLabel='' offLabel=''}}</td>
+      <td>{{md-switch checked=prod onLabel='' offLabel=''}}</td>
+    </tr>
+    <tr>
+      <td>Make-Payments</td>
+      <td>Place to makefdjs akfjdsl kajflkdjskl afjkldsj afkljkj payments in NGEN</td>
+      <td>{{md-switch checked=dev onLabel='' offLabel=''}}</td>
+      <td>{{md-switch checked=stage onLabel='' offLabel=''}}</td>
+      <td>{{md-switch checked=uat onLabel='' offLabel=''}}</td>
+      <td>{{md-switch checked=prod onLabel='' offLabel=''}}</td>
+    </tr> --}}
+  </tbody>
+</table>
+

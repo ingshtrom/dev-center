@@ -6,9 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('manage', { path: '/manage/:app_id' }, function () {
-    this.route('flags');
-  });
+  this.route('manage', { path: '/manage/:app_id' });
   this.route('create-app');
 });
 

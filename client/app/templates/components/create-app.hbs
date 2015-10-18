@@ -6,7 +6,7 @@
         <div class="row">
           <form class="col s12" {{action "createApp" on="submit"}}>
             <div class="row">
-              <div class="input-field col s6">
+              <div class="input-field col s12">
                 {{input id="app-name" value=appName class="validate" type="text"}}
                 <label for="app-name">Application Name</label>
               </div>
@@ -21,12 +21,11 @@
       {{/if}}
       <div class="card-action">
         {{#if isValidForm}}
-          <button {{action "createApp" on="click"}} class="btn waves-effect waves-light primary" type="submit">
+          <button {{action "createApp" on="click"}} class="btn-flat waves-effect waves-teal" type="submit">
             Submit
-            <i class="material-icons right">send</i>
           </button>
         {{else}}
-          <button class="btn primary disabled" type="submit">
+          <button class="btn-flat disabled" type="submit">
             Submit
           </button>
         {{/if}}

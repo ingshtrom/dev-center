@@ -1,3 +1,14 @@
-.btn.primary {
-  @extend .pink, .accent-2;
+button:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.btn.btn-float-over-sibling {
+  top: -35px;
+  right: 15px;
+}
+
+.btn-large.btn-float-over-sibling {
+  @extend .btn.btn-float-over-sibling;
+  top: -50px;
 }

@@ -13,7 +13,7 @@ export default Ember.Component.extend({
 
   // event handlers
   didInsertElement () {
-    Ember.Logger.debug('didInsertElement', this.get('options'));
+    // Ember.Logger.debug('didInsertElement', this.get('options'));
     // options is passed into the component
     window.$(this.element).dropdown();
   },
